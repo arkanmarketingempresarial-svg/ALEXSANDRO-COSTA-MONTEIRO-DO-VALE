@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-arkan-green: #00FF66;
+  --color-arkan-black: #000000;
+  --color-arkan-dark: #0A0A0A;
+  --color-arkan-surface: #141414;
+}
+
+@layer base {
+  body {
+    @apply bg-arkan-black text-white font-sans selection:bg-arkan-green selection:text-arkan-black;
+  }
+}
+
+@layer utilities {
+  .neon-border {
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
+    border: 1px solid rgba(0, 255, 102, 0.3);
+  }
+  .neon-bg-glow {
+    background: radial-gradient(circle at center, rgba(0, 255, 102, 0.15) 0%, transparent 70%);
+  }
+  .glass-card {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
